@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-  font-family: "Gabarito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+body {
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.navbar{
+.navbar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -23,11 +23,11 @@ body{
     z-index: 1;
 }
 
-.navbar_s1_title{
+.navbar_s1_title {
     color: #A435F0;
 }
 
-.navbar__s2{
+.navbar__s2 {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
@@ -37,30 +37,30 @@ body{
     align-items: center;
 }
 
-.navbar__s2 input{
+.navbar__s2 input {
     border: none;
     font-size: 16px;
     width: 100%;
     background-color: transparent;
 }
 
-.navbar__s2 input:focus{
+.navbar__s2 input:focus {
     outline: none;
 }
 
-.navbar__s3{
+.navbar__s3 {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
 /* My learning popup */
-.mylearning{
+.mylearning {
     position: relative;
     cursor: pointer;
 }
 
-.mylearning__popup{
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 1px;
@@ -71,33 +71,42 @@ body{
     display: none;
 }
 
-.mylearning:hover .mylearning__popup{
-    display: block;  
+.mylearning:hover .mylearning__popup {
+    display: block;
 }
 
-.categories{
+.categories {
     display: flex;
     padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-around;
 }
 
-.categories p{
+.categories p {
     background-color: #A435F0;
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
 }
 
-.sale-image{
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
+}
+
+.sale-image {
     position: relative;
 }
 
-.sale-image img{
+.sale-image img {
     width: 100%;
 }
 
-.sale-image__offer{
+.sale-image__offer {
     width: 30%;
     border: solid black 2px;
     background-color: white;
@@ -105,74 +114,90 @@ body{
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
-.recommended{
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.recommended {
     padding: 10px;
 }
 
-.recommended__container{
+.recommended__container {
     display: flex;
-    justify-content: space-between; 
-    margin-top: 10px;  
+    justify-content: space-between;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
-.course-card{
+.course-card {
     width: 300px;
 }
 
-.course-card img{
+.course-card img {
     height: 50%;
     width: 100%;
 }
 
-.topics{
-    padding: 10px;  
+.topics {
+    padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
 }
 
-.topics__container p{
+.topics__container p {
     border: solid gray 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container{
+.popular__container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 10px;
-    margin-left: 1px;  
+    margin-left: 1px;
     flex-wrap: wrap;
 }
 
-.footer{
+.footer {
     padding: 30px;
     background-color: black;
     color: white;
 }
 
-.footer_one{
+.footer_one {
     display: flex;
     gap: 10px;
 }
 
-.footer_one p{
+.footer_one p {
     margin: 20px;
 }
 
-.footer_two{
+.footer_two {
     margin: 20px;
     align-items: center;
     display: flex;
